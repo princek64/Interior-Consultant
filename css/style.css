@@ -20,7 +20,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 8vh;
+  min-height: 12vh;
 }
 
 .nav-bar .logo {
@@ -71,7 +71,8 @@ body {
 
 @media screen and (max-width: 768px) {
   body {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
+    width: 100%;
   }
   .nav-links {
     position: absolute;
@@ -163,5 +164,56 @@ body {
 .toggle .line3 {
   -webkit-transform: rotate(45deg) translate(-4px, -6px);
           transform: rotate(45deg) translate(-4px, -6px);
+}
+
+.main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 7% 1fr 1.5fr 7%;
+      grid-template-columns: 7% 1fr 1.5fr 7%;
+  grid-gap: 50px;
+  min-height: 80vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .left {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 22%;
+  text-align: initial;
+}
+
+.main .left h1 {
+  font-size: 3vmax;
+  color: #fff;
+}
+
+.main .left h3 {
+  margin-top: 7%;
+  width: 80%;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 45px;
+  color: #fff;
+}
+
+.main .left p {
+  margin-top: 5%;
+  color: #fff;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.main .right img {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

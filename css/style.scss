@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+$base-color: #fff;
+
 body{
     text-align: center;
     background: #181719;
@@ -14,14 +16,14 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 8vh;
+    min-height: 12vh;
 
     .logo{
-        border: 1px solid #fff;
+        border: 1px solid $base-color;
         font-size: 1vmax;
         font-style: normal;
         font-weight: 200;
-        color: #fff;
+        color: $base-color;
         width: 10%;
         padding: 0.2% 0.2%;
     }
@@ -51,7 +53,7 @@ body{
         div{
             width: 25px;
             height: 2px;
-            background-color: #fff;
+            background-color: $base-color;
             margin: 5px;
             transition: all 0.3s ease;
         }
@@ -62,9 +64,8 @@ body{
 
 @media screen and (max-width: 768px) {
     body{
-        overflow-x: hidden;
-        // height: 100vh;
-        // overflow: hidden;
+        overflow-x: hidden !important;
+        width: 100%;
     }
 
     .nav-links{
@@ -138,3 +139,53 @@ body{
         transform: rotate(45deg) translate(-4px, -6px);
     }
 }
+
+
+
+
+// Main Section
+
+.main{
+    display: grid;
+    grid-template-columns: 7% 1fr 1.5fr 7%;
+    grid-gap: 50px;
+    min-height: 80vh;
+    align-items: center;
+
+    .left{
+        grid-column: 2/3;
+        align-self: flex-start;
+        margin-top: 22%;
+        text-align: initial;
+
+        h1{
+            font-size: 3vmax;
+            color: $base-color;
+        }
+        h3{
+            margin-top: 7%;
+            width: 80%;
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 30px;
+            line-height: 45px;
+            color: $base-color;
+        }
+        p{
+            margin-top: 5%;
+            color: $base-color;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 30px;
+        }
+    }
+
+    .right{
+        img{
+            width: 100%;
+        }
+    }
+}
+
