@@ -31,6 +31,7 @@ body {
   color: #fff;
   width: 10%;
   padding: 0.2% 0.2%;
+  cursor: pointer;
 }
 
 .nav-bar .nav-links {
@@ -50,7 +51,7 @@ body {
 .nav-bar .nav-links a {
   color: white;
   text-decoration: none;
-  font-size: 1.2vmax;
+  font-size: 1.5vmax;
   font-weight: bold;
   letter-spacing: 2px;
 }
@@ -67,58 +68,6 @@ body {
   margin: 5px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-}
-
-@media screen and (max-width: 768px) {
-  body {
-    overflow-x: hidden !important;
-    width: 100%;
-  }
-  .nav-links {
-    position: absolute;
-    right: 0;
-    height: 92vh;
-    top: 8vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    -webkit-transition: -webkit-transform 0.5s ease-in;
-    transition: -webkit-transform 0.5s ease-in;
-    transition: transform 0.5s ease-in;
-    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
-  }
-  .nav-bar .nav-links {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 100%;
-  }
-  .nav-bar .nav-links a {
-    font-size: 3.2vmax;
-    line-height: 4rem;
-  }
-  .nav-bar .logo {
-    white-space: nowrap;
-    width: 18%;
-  }
-  .nav-bar .burger {
-    display: block;
-  }
-  .nav-links li {
-    opacity: 0;
-  }
 }
 
 .nav-active {
@@ -169,19 +118,17 @@ body {
 .main {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 7% 1fr 1.5fr 7%;
-      grid-template-columns: 7% 1fr 1.5fr 7%;
+  -ms-grid-columns: 1fr 1.5fr;
+      grid-template-columns: 1fr 1.5fr;
   grid-gap: 50px;
   min-height: 80vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 1% 15%;
 }
 
 .main .left {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
   -ms-flex-item-align: start;
       align-self: flex-start;
   margin-top: 22%;
@@ -190,17 +137,18 @@ body {
 
 .main .left h1 {
   font-size: 3vmax;
+  font-weight: 200;
   color: #fff;
 }
 
-.main .left h3 {
+.main .left h6 {
   margin-top: 7%;
-  width: 80%;
+  width: 90%;
   font-family: Montserrat;
   font-style: normal;
-  font-weight: 300;
-  font-size: 30px;
-  line-height: 45px;
+  font-weight: lighter;
+  font-size: 1.8vmax;
+  line-height: 2.5vmax;
   color: #fff;
 }
 
@@ -209,11 +157,134 @@ body {
   color: #fff;
   font-style: normal;
   font-weight: 600;
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 1.5vmax;
 }
 
 .main .right img {
   width: 100%;
+}
+
+.main .right .card-overlay {
+  background: #181719;
+  color: #fff;
+  max-width: 480px;
+  padding: 2% 2%;
+  position: relative;
+  left: 35%;
+  bottom: 10%;
+}
+
+.main .right .card-overlay h3 {
+  margin-top: 4%;
+  font-size: 1.5vmax;
+  font-weight: 200;
+}
+
+.main .right .card-overlay .card-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .right .card-overlay .card-head .card-head-text {
+  margin-left: 6%;
+}
+
+.main .right .card-overlay .card-head img {
+  margin-left: 4%;
+  width: 50px;
+  border-radius: 50%;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer a p {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden !important;
+    width: 100%;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0;
+    height: 92vh;
+    top: 8vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+    transition: -webkit-transform 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  }
+  .nav-bar {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 4%;
+  }
+  .nav-bar .nav-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  .nav-bar .nav-links a {
+    font-size: 3.2vmax;
+    line-height: 4rem;
+  }
+  .nav-bar .logo {
+    white-space: nowrap;
+    width: 18%;
+    padding: 1% 0.5%;
+  }
+  .nav-bar .burger {
+    display: block;
+  }
+  .nav-bar .nav-links {
+    width: 0%;
+    right: 50%;
+  }
+  .nav-bar .nav-links li {
+    opacity: 0;
+  }
+  .main {
+    display: block;
+    margin: 0 3%;
+  }
+  .main .left {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin-top: 8%;
+  }
+  .main .left p {
+    margin: 5% 0 10% 0;
+  }
+  .main .right .card-overlay {
+    max-width: 300px;
+    left: 7%;
+    bottom: 5vh;
+  }
 }
 /*# sourceMappingURL=style.css.map */
